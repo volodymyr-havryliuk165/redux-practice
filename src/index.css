@@ -12,3 +12,76 @@ code {
     monospace;
 }
 
+h2 {
+  margin-top: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.container > * {
+  width: 50%;
+  padding: 2rem;
+}
+
+.create-post-form,
+.posts,
+.post {
+  border: 2px solid black;
+}
+
+.create-post-form h2 {
+  text-align: center;
+}
+
+.create-post-form form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 1rem;
+  padding: 0 15rem;
+  font-size: 1.5rem;
+}
+
+.create-post-form form > * {
+  font-size: 1.5rem;
+}
+
+.create-post-form button[type=submit] {
+  grid-column: span 2;
+}
+
+.posts {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.post {
+  padding: 1rem;
+}
+
+.post__header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.post__title,
+.post__author {
+  text-transform: capitalize;
+}
+
+.post__actions {
+  display: flex;
+  justify-content: space-between;
+  padding-block: .5rem;
+  border-top: 1px solid gray;
+}

@@ -5,8 +5,10 @@ import NewPostForm from './features/posts/NewPostForm';
 function App() {
   return (
     <div className="App">
-      <NewPostForm/>
-      <PostsList/>
+      <div className="container">
+        <NewPostForm/>
+        <PostsList/>
+      </div>
     </div>
   );
 }

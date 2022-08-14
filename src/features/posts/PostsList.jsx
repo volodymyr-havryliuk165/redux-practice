@@ -15,8 +15,8 @@ const PostsList = () => {
       {posts.map((post) => {
         return (
           <div className="post" key={post.id}>
-            <h2 className="post__title">
-              <span>{post.title}</span>
+            <h2 className="post__header">
+              <span className='post__title'>{post.title}</span>
               <PostAuthor id={post?.userId} />
             </h2>
             { !editing && <p className="post__content">{post.content}</p>}
@@ -30,10 +30,12 @@ const PostsList = () => {
             />}
             <div className="post__actions">
               <Reactions postId={post.id} postReactions={post.reactions} />
-              <button className="post__edit" onClick={() => setEditing(e => !e)}>{editing? 'Save' : 'Edit'}</button>
-              <button className="post__delete" onClick={() => {
-                dispatch(deletePost({id: post.id}));
-              }}>Delete</button>
+              <div className="post__buttons">
+                <button className="post__edit" onClick={() => setEditing(e => !e)}>{editing? 'Save' : 'Edit'}</button>
+                <button className="post__delete" onClick={() => {
+                  dispatch(deletePost({id: post.id}));
+                }}>Delete</button>
+              </div>
             </div>
           </div>
         );
